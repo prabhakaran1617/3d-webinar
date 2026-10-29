@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GrowthPulse – Turn Your LinkedIn From Invisible to Influential</title>
+<meta name="description" content="Build your personal brand on LinkedIn with strategy, content and consistency. Get a complete LinkedIn audit for just ₹1.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0a66c2;
+  --primary-deep:#004e99;
+  --ink:#191c1e;
+  --ink-2:#414752;
+  --ink-3:#565e74;
+  --muted:#727783;
+  --surface:#f7f9fb;
+  --surface-2:#f2f4f6;
+  --surface-3:#e6e8ea;
+  --surface-4:#e0e3e5;
+  --chip-blue:#dae2fd;
+  --chip-blue-2:#d6e3ff;
+  --chip-sky:#a8c8ff;
+  --chip-amber:#ffdcc3;
+  --amber-deep:#7a4000;
+  --amber:#9d5400;
+  --amber-ink:#2f1500;
+  --danger:#ba1a1a;
+  --white:#fff;
+  --font-head:'Plus Jakarta Sans','Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --shadow-sm:0 1px 1px rgba(0,0,0,.05);
+  --shadow-lg:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);
+  --pad-x:52px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,p{margin:0}
+button,input{font:inherit}
+.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ic-fill{fill:currentColor;stroke:none}
+:focus-visible{outline:3px solid rgba(10,102,194,.45);outline-offset:2px}
+.wrap{max-width:1280px;margin:0 auto}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* ---------- Header ---------- */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(193,198,212,.3);box-shadow:0 1px 8px rgba(15,23,42,.06)}
+.header-in{max-width:1280px;margin:0 auto;height:80px;padding:0 var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand-wrap{display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:8px}
+.brand-mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--primary-deep),var(--primary));display:grid;place-items:center;color:#fff;font-size:18px}
+.brand-name{font-family:var(--font-head);font-weight:600;font-size:20px;letter-spacing:-.5px;color:var(--ink)}
+.top-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;background:var(--chip-amber);border:1px solid rgba(255,183,125,.4);font-family:var(--font-head);font-weight:700;font-size:11px;letter-spacing:.55px;text-transform:uppercase;color:var(--amber-ink);white-space:nowrap}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex:none}
+.nav{display:flex;gap:8px}
+.nav a{padding:6px 8px;border-radius:8px;font-family:var(--font-head);font-weight:600;font-size:14px;line-height:20px;color:var(--ink-2);transition:background .15s,color .15s}
+.nav a:hover{background:var(--surface-2);color:var(--primary-deep)}
+.head-right{display:flex;align-items:center;gap:16px}
+.avatar{border-radius:50%;display:grid;place-items:center;color:#fff;font-family:var(--font-head);font-weight:700;flex:none}
+.avatar.sm{width:32px;height:32px;font-size:12px;box-shadow:0 0 0 2px var(--chip-blue-2)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;font-family:var(--font-head);font-weight:600;font-size:14px;line-height:20px;cursor:pointer;border:0;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-sm{padding:10px 16px;border-radius:8px;box-shadow:0 8px 20px -4px rgba(10,102,194,.4)}
+.btn-md{padding:14px 24px;box-shadow:0 20px 25px -5px rgba(10,102,194,.25),0 8px 10px -6px rgba(10,102,194,.25)}
+.btn-lg{padding:16px 40px;font-size:20px;line-height:28px;box-shadow:0 20px 25px -5px rgba(10,102,194,.3),0 8px 10px -6px rgba(10,102,194,.3)}
+.btn-white{background:#fff;color:var(--ink);padding:14px 24px;box-shadow:var(--shadow-sm)}
+.btn-gray{background:var(--surface-3);color:var(--ink);padding:16px 40px}
+.pill-only{background:var(--chip-amber);color:var(--amber-ink);border-radius:999px;padding:2px 8px;font-size:11px;line-height:14px;font-weight:700;letter-spacing:.55px;text-transform:uppercase}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:40px var(--pad-x) 80px;overflow:hidden}
+.hero-glow{position:absolute;left:50%;top:-128px;width:720px;height:360px;transform:translateX(-50%);border-radius:999px;filter:blur(64px);background:linear-gradient(153deg,rgba(214,227,255,.4),rgba(0,94,181,.05) 50%,rgba(0,94,181,0));pointer-events:none}
+.hero-grid{position:relative;max-width:1176px;margin:0 auto;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px;align-items:center}
+.hero-left{grid-column:1/span 7}
+.hero-right{grid-column:8/span 5;position:relative}
+.auth-badge{display:inline-flex;align-items:center;gap:4px;flex-wrap:wrap;padding:6px 16px;border-radius:999px;background:var(--chip-blue);box-shadow:var(--shadow-sm)}
+.auth-badge .t1{font-family:var(--font-head);font-weight:600;font-size:12px;line-height:16px;letter-spacing:.6px;text-transform:uppercase;color:#131b2e}
+.auth-badge .t2{font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;color:#5c647a;display:inline-flex;align-items:center;gap:4px}
+.auth-badge .t2::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--primary-deep);margin-left:6px}
+.auth-badge .ic{font-size:13px;color:var(--primary-deep)}
+.hero h1{font-family:var(--font-head);font-weight:800;font-size:56px;line-height:64px;letter-spacing:-1.4px;margin-top:16px;max-width:600px}
+.grad{background:linear-gradient(90deg,var(--primary-deep),var(--primary));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;line-height:28px;color:var(--ink-2);max-width:576px;margin-top:16px}
+.sub{font-size:15px;line-height:24px;font-weight:500;color:var(--ink-3);max-width:644px;margin-top:16px}
+.cta-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:20px}
+.proof{display:flex;align-items:center;gap:16px;margin-top:24px;flex-wrap:wrap}
+.faces{display:flex}
+.face{width:40px;height:40px;border-radius:50%;margin-right:-8px;box-shadow:0 0 0 2px #fff,0 1px 2px rgba(0,0,0,.05);display:grid;place-items:center;color:#fff;font-family:var(--font-head);font-weight:700;font-size:13px}
+.face.more{background:var(--chip-blue-2);color:#001b3d;font-size:11px;margin-right:0}
+.stars{display:flex;align-items:center;gap:2px;color:var(--amber-deep);font-size:15px}
+.stars b{font-family:var(--font-head);font-size:11px;line-height:14px;color:var(--ink);margin-left:6px}
+.proof p{font-size:13px;line-height:20px;color:var(--ink-2)}
+
+.show-glow{position:absolute;inset:-8px;border-radius:24px;filter:blur(40px);background:linear-gradient(90deg,rgba(168,200,255,.5),rgba(218,226,253,.5))}
+.show{position:relative;background:#fff;border-radius:16px;padding:24px;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;gap:16px}
+.show-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-bottom:8px}
+.lights{display:flex;align-items:center;gap:4px}
+.lights i{width:12px;height:12px;border-radius:50%;display:block}
+.lights span{font-family:var(--font-head);font-weight:600;font-size:11px;line-height:14px;color:var(--ink-3);margin-left:8px}
+.live{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;background:var(--chip-amber);font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;color:var(--amber-ink);white-space:nowrap}
+.split{display:flex;gap:8px}
+.state{flex:1;min-width:0;border-radius:12px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;gap:8px;min-height:144px}
+.state.before{background:var(--surface-2)}
+.state.after{background:rgba(218,226,253,.6)}
+.state .row{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.state .lbl{font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;letter-spacing:.55px;text-transform:uppercase;white-space:nowrap}
+.before .lbl{color:var(--ink-3)}
+.after .lbl{color:var(--primary-deep)}
+.tag{font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;padding:2px 6px;border-radius:4px;background:var(--surface-4);color:var(--ink-3)}
+.tag.brand{background:var(--primary);color:#fff;border-radius:999px;padding:2px 8px;display:inline-flex;align-items:center;gap:4px;box-shadow:var(--shadow-sm)}
+.tag.brand .ic{font-size:12px}
+.num{font-family:var(--font-head);font-weight:700;font-size:20px;line-height:28px}
+.before .num{color:var(--ink-2)}
+.after .num{color:var(--primary-deep);font-weight:800}
+.cap{font-size:13px;line-height:20px}
+.before .cap{color:var(--ink-3)}
+.after .cap{color:#5c647a;font-weight:500}
+.foot{display:flex;align-items:center;gap:4px;font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;padding-top:8px}
+.before .foot{color:var(--danger)}
+.after .foot{color:var(--primary-deep)}
+.foot .ic{font-size:12px}
+.spark{background:var(--surface-2);border-radius:12px;padding:16px;height:194px;display:flex;flex-direction:column}
+.spark-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.spark-top .l{display:flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:600;font-size:12px;line-height:16px;color:var(--ink);min-width:0}
+.spark-top .l .ic{font-size:18px;color:var(--primary-deep)}
+.spark-top .r{font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;padding:2px 8px;border-radius:999px;background:var(--chip-amber);color:var(--amber-deep);white-space:nowrap}
+.spark svg.chart{flex:1;width:100%;height:112px;margin-top:10px;overflow:visible}
+.weeks{display:flex;justify-content:space-between;gap:6px;padding-top:8px;font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;color:var(--ink-3);white-space:nowrap}
+.weeks span:last-child{color:var(--primary-deep)}
+.endorse{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:8px}
+.endorse .who{display:flex;align-items:center;gap:8px;min-width:0}
+.endorse .who b{display:block;font-family:var(--font-head);font-size:11px;line-height:14px}
+.endorse .who span{display:block;font-size:13px;line-height:20px;color:var(--ink-3)}
+.voice{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:8px;background:var(--chip-blue-2);font-family:var(--font-head);font-weight:600;font-size:11px;line-height:14px;color:var(--primary-deep);white-space:nowrap}
+.voice .ic{font-size:14px}
+
+/* ---------- Section 2 ---------- */
+.sec2{background:var(--surface-2);padding:40px 20px}
+.sec2-in{max-width:1240px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:24px;align-items:center}
+.sec-head{text-align:center;max-width:672px;display:flex;flex-direction:column;align-items:center}
+.chip{display:inline-block;padding:4px 12px;border-radius:999px;background:var(--chip-blue);font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;letter-spacing:.55px;text-transform:uppercase;color:#131b2e}
+.eyebrow{font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;letter-spacing:.55px;text-transform:uppercase;color:var(--primary-deep)}
+.h2{font-family:var(--font-head);font-weight:700;font-size:40px;line-height:48px;color:var(--ink)}
+.sec-head .chip{margin-bottom:4px}
+.sec-head .h2{margin-top:0}
+.eyebrow + .h2{margin-top:4px}
+.sec-head p.s{font-size:18px;line-height:28px;color:var(--ink-2);margin-top:8px}
+.metrics{display:flex;gap:16px;align-items:flex-start;width:100%;padding-top:16px}
+.metric{flex:1;min-width:0;background:#fff;border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:20px}
+.m-ico{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:24px;color:var(--primary-deep)}
+.m-big{font-family:var(--font-head);font-weight:800;font-size:56px;line-height:64px;letter-spacing:-1.4px}
+.m-bar{width:40px;height:2px;background:var(--primary);margin:8px 0}
+.m-txt{font-size:15px;line-height:24px;font-weight:500;color:var(--ink-2)}
+.points{display:flex;gap:8px;align-items:flex-start;width:100%;padding-top:16px}
+.point{flex:1;min-width:0;background:#fff;border-radius:12px;padding:16px;display:flex;gap:8px;box-shadow:var(--shadow-sm);font-family:var(--font-head);font-weight:600;font-size:14px;line-height:20px;align-self:stretch}
+.tick{width:28px;height:28px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;flex:none;font-size:12px;margin-top:2px}
+.callout{width:100%;background:#fff;border-radius:16px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:var(--shadow-sm)}
+.callout .l{display:flex;align-items:center;gap:16px}
+.callout .ci{width:48px;height:48px;border-radius:50%;background:var(--chip-amber);display:grid;place-items:center;color:var(--amber-deep);font-size:20px;flex:none}
+.callout h4{font-family:var(--font-head);font-weight:700;font-size:20px;line-height:28px}
+.callout p{font-size:15px;line-height:24px;color:var(--ink-2)}
+.btn-blue-sm{background:var(--primary);color:#fff;padding:10px 24px;border-radius:8px;font-family:var(--font-head);font-weight:600;font-size:14px;line-height:20px;white-space:nowrap}
+
+/* ---------- Section 3 ---------- */
+.sec3{padding:40px var(--pad-x)}
+.sec3-grid{max-width:1176px;margin:0 auto;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px;align-items:start}
+.s3-left{grid-column:1/span 5}
+.s3-right{grid-column:6/span 7}
+.s3-left .eyebrow{display:block;padding-top:5.5px}
+.s3-left .h2{margin-top:8px}
+.s3-left .lead2{font-size:18px;line-height:28px;color:var(--ink-2);margin-top:12px}
+.next{background:var(--surface-2);border-radius:16px;padding:24px;margin-top:24px;box-shadow:var(--shadow-sm)}
+.next h3{font-family:var(--font-head);font-weight:600;font-size:20px;line-height:28px}
+.steps{display:flex;flex-direction:column;gap:16px;margin-top:16px}
+.step{display:flex;gap:16px}
+.step .n{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-head);font-weight:700;font-size:14px;flex:none}
+.step h4{font-family:var(--font-head);font-weight:700;font-size:14px;line-height:20px}
+.step p{font-size:13px;line-height:20px;color:var(--ink-2);margin-top:2px}
+.nospam{display:flex;align-items:center;gap:8px;margin-top:24px;font-size:13px;line-height:20px;color:var(--ink-3)}
+.nospam .ic{font-size:15px;color:var(--primary-deep)}
+.form-card{background:#fff;border-radius:16px;padding:40px;box-shadow:var(--shadow-lg)}
+.field{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.field label{font-family:var(--font-head);font-weight:600;font-size:12px;line-height:16px;color:var(--ink)}
+.input-wrap{position:relative}
+.input-wrap .ic{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:15px;color:var(--ink-3);pointer-events:none}
+.input-wrap input{width:100%;height:48px;border-radius:12px;border:1px solid var(--surface-3);background:#fff;padding:0 16px 0 44px;font-size:15px;color:var(--ink);box-shadow:inset 0 2px 4px rgba(0,0,0,.05);transition:border-color .15s,box-shadow .15s}
+.input-wrap input::placeholder{color:var(--muted)}
+.input-wrap input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(10,102,194,.18),inset 0 2px 4px rgba(0,0,0,.05)}
+.input-wrap input.bad{border-color:var(--danger)}
+.btn-submit{width:100%;background:var(--primary);color:#fff;border:0;border-radius:12px;padding:16px;font-family:var(--font-head);font-weight:700;font-size:20px;line-height:28px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;box-shadow:0 20px 25px -5px rgba(10,102,194,.3),0 8px 10px -6px rgba(10,102,194,.3);transition:transform .15s,opacity .15s}
+.btn-submit:hover{transform:translateY(-1px)}
+.btn-submit:disabled{opacity:.7;cursor:progress;transform:none}
+.btn-submit .ic{font-size:18px}
+.secure{display:flex;align-items:center;justify-content:center;gap:4px;padding-top:8px;font-size:13px;line-height:20px;color:var(--ink-2);text-align:center}
+.secure .ic{font-size:14px;color:var(--primary-deep)}
+.msg{display:none;margin-top:12px;padding:12px 16px;border-radius:12px;font-size:14px;line-height:20px;font-weight:500}
+.msg.ok{display:block;background:#e3f6ea;color:#0b5a2b}
+.msg.err{display:block;background:#ffdad6;color:#93000a}
+
+/* ---------- Section 4 ---------- */
+.sec4{background:linear-gradient(180deg,var(--surface),var(--surface-2));padding:40px var(--pad-x)}
+.offer{position:relative;max-width:1176px;margin:0 auto;background:#fff;border-radius:24px;padding:40px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);overflow:hidden}
+.glow{position:absolute;width:384px;height:384px;border-radius:50%;filter:blur(64px);pointer-events:none}
+.glow.a{right:-96px;top:-96px;background:rgba(255,183,125,.4)}
+.glow.b{left:-96px;bottom:-96px;background:rgba(168,200,255,.3)}
+.offer-grid{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px;align-items:center}
+.offer-l{grid-column:1/span 7;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.offer-r{grid-column:8/span 5}
+.badge-amber{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border-radius:999px;background:var(--chip-amber);font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;letter-spacing:.55px;text-transform:uppercase;color:var(--amber-ink)}
+.badge-amber .ic{font-size:13px}
+.offer-l .h2 em{font-style:normal;color:var(--amber-deep)}
+.offer-l p.big{font-size:18px;line-height:28px;font-weight:500;color:var(--ink-2)}
+.price{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.price s{font-family:var(--font-head);font-weight:700;font-size:28px;line-height:36px;color:var(--ink-3)}
+.price strong{font-family:var(--font-head);font-weight:800;font-size:56px;line-height:64px;letter-spacing:-1.4px;color:var(--amber-deep)}
+.price span{font-family:var(--font-head);font-weight:700;font-size:14px;line-height:20px;padding:4px 12px;border-radius:8px;background:var(--chip-amber);color:var(--amber-ink);box-shadow:var(--shadow-sm);margin-bottom:8px}
+.get{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;padding-top:4px}
+.get div{background:var(--surface-2);border-radius:12px;padding:16px;display:flex;gap:8px;min-height:92px}
+.get .ic{font-size:20px;color:var(--primary-deep);margin-top:0}
+.get h4{font-family:var(--font-head);font-weight:700;font-size:14px;line-height:20px}
+.get p{font-size:13px;line-height:20px;color:var(--ink-2)}
+.why{width:100%;background:var(--surface-4);border-radius:12px;padding:16px;display:flex;align-items:center;gap:16px;font-weight:600;font-size:15px;line-height:24px}
+.why .ic{font-size:22px;color:var(--amber-deep)}
+.book{position:relative;background:var(--surface-2);border-radius:16px;padding:24px;box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)}
+.book-top{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-bottom:8px}
+.book-top h3{font-family:var(--font-head);font-weight:700;font-size:20px;line-height:28px}
+.book-top span{font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;padding:4px 10px;border-radius:999px;background:var(--chip-blue);color:#131b2e;white-space:nowrap}
+.book-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.book-list div{background:#fff;border-radius:8px;padding:12px;display:flex;align-items:center;gap:8px;box-shadow:var(--shadow-sm);font-family:var(--font-head);font-weight:600;font-size:12px;line-height:16px}
+.book-list .ic{font-size:18px;color:var(--primary-deep)}
+.slots{background:var(--chip-amber);border-radius:12px;padding:12px;margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--amber-ink);font-family:var(--font-head);font-size:11px;line-height:14px}
+.slots b{display:inline-flex;align-items:center;gap:4px;font-weight:700}
+.slots b::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--amber-deep)}
+.slots em{font-style:normal;font-weight:800;text-transform:uppercase}
+.big-btn{margin-top:24px;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px;border-radius:12px;background:linear-gradient(90deg,var(--amber-deep),var(--amber));color:#fff;font-family:var(--font-head);font-weight:700;font-size:20px;line-height:28px;box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);transition:transform .15s}
+.big-btn:hover{transform:translateY(-1px)}
+.big-btn .ic{font-size:14px}
+.book small{display:block;text-align:center;font-size:13px;line-height:20px;color:var(--ink-3);margin-top:8px}
+
+/* ---------- Section 5 ---------- */
+.sec5{padding:40px 20px}
+.sec5-in{max-width:1240px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:40px;align-items:center}
+.reviews{display:flex;gap:16px;align-items:flex-start;width:100%}
+.review{flex:1;min-width:0;background:#fff;border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:20px;align-self:stretch;justify-content:space-between}
+.r-top{display:flex;align-items:center;justify-content:space-between;color:var(--amber-deep);font-size:16px}
+.r-top .stars{gap:0}
+.r-top .vf{color:var(--primary);font-size:18px}
+.review blockquote{margin:14px 0 0;font-style:italic;font-size:15px;line-height:24.4px;color:var(--ink)}
+.person{background:var(--surface-2);border-radius:12px;padding:8px;display:flex;align-items:center;gap:8px}
+.person .avatar{width:40px;height:40px;font-size:14px}
+.person b{display:block;font-family:var(--font-head);font-size:12px;line-height:16px}
+.person span{display:block;font-size:13px;line-height:20px;color:var(--ink-3)}
+.banner{width:100%;background:var(--chip-blue);border-radius:16px;padding:16px;display:flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-head);font-weight:700;font-size:20px;line-height:28px;color:#131b2e;text-align:center}
+.banner .ic{font-size:22px;color:var(--primary-deep)}
+
+/* ---------- Section 6 ---------- */
+.sec6{background:var(--surface-2);padding:40px 20px}
+.sec6-in{max-width:1000px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:40px}
+.faq{display:flex;flex-direction:column;gap:16px}
+.faq details{background:#fff;border-radius:16px;box-shadow:var(--shadow-sm)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px;font-family:var(--font-head);font-weight:600;font-size:20px;line-height:28px;border-radius:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{font-size:14px;color:var(--primary-deep);transition:transform .2s}
+.faq details[open] summary .ic{transform:rotate(180deg)}
+.faq details p{padding:0 24px 24px;font-size:15px;line-height:24px;color:var(--ink-2);max-width:760px}
+
+/* ---------- Section 7 ---------- */
+.sec7{background:var(--surface);padding:40px var(--pad-x)}
+.final{max-width:1176px;margin:0 auto;background:#fff;border-radius:24px;padding:40px;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;align-items:center;text-align:center}
+.final .chip2{display:inline-flex;align-items:center;gap:4px;padding:4px 16px;border-radius:999px;background:var(--chip-blue);font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;letter-spacing:.55px;text-transform:uppercase;color:#131b2e}
+.final .chip2::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--primary-deep)}
+.final h2{font-family:var(--font-head);font-weight:800;font-size:40px;line-height:48px;letter-spacing:-1px;max-width:672px;margin-top:8px}
+.final p.s{font-size:18px;line-height:28px;color:var(--ink-2);max-width:576px;margin:8px 0 24px}
+.final .btns{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap}
+.closing{width:100%;margin-top:40px;background:var(--surface-2);border-radius:16px;padding:24px 16px 16px;display:flex;align-items:center;justify-content:space-between;gap:24px;text-align:left}
+.closing .nm{display:flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:800;font-size:20px;line-height:28px}
+.closing .nm::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--primary)}
+.closing p{font-size:15px;line-height:24px;color:var(--ink-2)}
+.closing .r{text-align:right}
+.closing .r b{display:block;font-family:var(--font-head);font-size:11px;line-height:14px}
+.closing .links{display:flex;gap:16px;justify-content:flex-end;padding-top:4px;font-size:13px;line-height:20px;color:var(--primary-deep);font-weight:500;flex-wrap:wrap}
+.closing .links a:hover{text-decoration:underline}
+.closing .r small{display:block;font-family:var(--font-head);font-weight:700;font-size:11px;line-height:14px;color:var(--ink-3);padding-top:4px}
+
+/* ---------- Footer ---------- */
+.footer{background:#fff;border-top:1px solid rgba(193,198,212,.3);padding:41px var(--pad-x) 40px}
+.footer-in{max-width:1176px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.footer .brand-name{font-size:14px;line-height:20px;letter-spacing:0}
+.footer .brand-mark{width:24px;height:24px;border-radius:7px;font-size:14px}
+.f-links{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;line-height:20px;color:var(--ink-2)}
+.f-links a:hover{color:var(--primary-deep)}
+.copy{font-size:13px;line-height:20px;color:var(--ink-2)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1180px){
+  .top-badge{display:none}
+  .nav a{padding:6px 6px}
+}
+@media (max-width:1024px){
+  :root{--pad-x:32px}
+  .hero h1{font-size:48px;line-height:56px}
+  .hero-left,.hero-right,.s3-left,.s3-right,.offer-l,.offer-r{grid-column:1/-1}
+  .hero-right{max-width:560px}
+  .metrics{flex-wrap:wrap}
+  .metric{flex:1 1 calc(50% - 8px)}
+  .points{flex-wrap:wrap}
+  .point{flex:1 1 calc(33% - 8px)}
+  .reviews{flex-wrap:wrap}
+  .review{flex:1 1 calc(50% - 8px)}
+  .nav{display:none}
+}
+@media (max-width:768px){
+  :root{--pad-x:20px}
+  .header-in{height:68px}
+  .hero{padding-bottom:48px}
+  .hero h1{font-size:40px;line-height:48px;letter-spacing:-1px}
+  .h2,.final h2{font-size:30px;line-height:38px}
+  .lead,.sec-head p.s,.final p.s,.offer-l p.big,.s3-left .lead2{font-size:16px;line-height:26px}
+  .sec2,.sec5,.sec6{padding-left:12px;padding-right:12px}
+  .sec2-in,.sec5-in,.sec6-in{padding:0 8px}
+  .metric{flex:1 1 100%}
+  .m-big{font-size:44px;line-height:52px}
+  .point{flex:1 1 100%}
+  .callout{flex-direction:column;align-items:flex-start}
+  .form-card{padding:24px}
+  .offer{padding:24px}
+  .get{grid-template-columns:1fr}
+  .price strong{font-size:44px;line-height:52px}
+  .review{flex:1 1 100%}
+  .faq summary{font-size:17px;line-height:24px;padding:20px}
+  .faq details p{padding:0 20px 20px}
+  .final{padding:28px 20px}
+  .closing{flex-direction:column;align-items:flex-start}
+  .closing .r{text-align:left}
+  .closing .links{justify-content:flex-start}
+  .split{flex-direction:column}
+  .weeks{font-size:10px}
+  .btn-lg,.btn-gray{padding:14px 24px;font-size:18px}
+  .footer-in{flex-direction:column;align-items:flex-start}
+  .endorse{flex-wrap:wrap}
+}
+@media (max-width:420px){
+  .brand-name{font-size:17px}
+  .btn-sm{padding:9px 12px}
+  .weeks span:nth-child(2),.weeks span:nth-child(3){display:none}
+  .auth-badge .t2{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path class="ic-fill" d="M13 2 4 14h6l-1 8 9-12h-6z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.5 2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 17.4l-5.9 3.3 1.3-6.6L2.5 9.5l6.6-.8z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-verified" viewBox="0 0 24 24"><path d="M12 2.5l2.4 1.9 3-.1 1 2.8 2.5 1.7-.9 2.9.9 2.9-2.5 1.7-1 2.8-3-.1L12 21.5l-2.4-1.9-3 .1-1-2.8-2.5-1.7.9-2.9-.9-2.9 2.5-1.7 1-2.8 3 .1z"/><path d="m8.5 12.2 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><circle cx="5" cy="10" r="2.2"/><circle cx="19" cy="10" r="2.2"/><path d="M6.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5M1.5 18c0-2 1.5-3.5 3.5-3.5M22.5 18c0-2-1.5-3.5-3.5-3.5"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-hub" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.6"/><circle cx="12" cy="4" r="1.8"/><circle cx="4.5" cy="16.5" r="1.8"/><circle cx="19.5" cy="16.5" r="1.8"/><path d="M12 5.8v3.6M6.1 15.6l3.7-2.2M17.9 15.6l-3.7-2.2"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 2.5c3.5 2 5 5.5 5 9.5l-2 4h-6l-2-4c0-4 1.5-7.5 5-9.5z"/><circle cx="12" cy="10" r="1.6"/><path d="M7 13l-3 3 1 3 3-1M17 13l3 3-1 3-3-1M12 18v3.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" stroke-width="3"/></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 2.5 4.5 5.5v6c0 4.5 3 8.2 7.5 10 4.5-1.8 7.5-5.5 7.5-10v-6z"/><path d="m8.8 12 2.4 2.4 4-4.4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5 4.5 5.5v6c0 4.5 3 8.2 7.5 10 4.5-1.8 7.5-5.5 7.5-10v-6z"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2v.1h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6.5L21 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m5 9 7 7 7-7" stroke-width="2.6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-person-check" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.8 3-6 6.5-6s6.5 2.2 6.5 6M16 11l2.2 2.2L22 9"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13.5" height="12" rx="2"/><path d="m16 10.5 5.5-3v9l-5.5-3z"/></symbol>
+    <symbol id="i-idcard" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.5 17c.5-2 1.8-3 3.5-3s3 1 3.5 3M15 9.5h3.5M15 13h3.5"/></symbol>
+    <symbol id="i-chart-search" viewBox="0 0 24 24"><path d="M3 18l5-6 4 3 5-7"/><circle cx="17" cy="14.5" r="3"/><path d="m19.2 16.7 2.3 2.3"/></symbol>
+    <symbol id="i-brand" viewBox="0 0 24 24"><circle cx="12" cy="9" r="3"/><path d="M6.5 20c.5-3 2.7-5 5.5-5s5 2 5.5 5M12 2v1.5M4.5 5 6 6.5M19.5 5 18 6.5"/></symbol>
+    <symbol id="i-checklist" viewBox="0 0 24 24"><path d="m3 6 2 2 3.5-3.5M3 14l2 2 3.5-3.5M12 7h9M12 15h9M12 19.5h5"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke-width="2.6"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M2.5 12h4l2.5-6 4 12 2.5-6h6" stroke-width="2.4"/></symbol>
+    <symbol id="i-badge-star" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="m12 7.5 1.5 3 3.3.5-2.4 2.3.6 3.3-3-1.6-3 1.6.6-3.3-2.4-2.3 3.3-.5z"/></symbol>
+    <symbol id="i-group" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 19.5c0-3.5 2.8-5.5 6.5-5.5s6.5 2 6.5 5.5M16.5 5.2a3.2 3.2 0 0 1 0 5.6M18 14.3c2.3.6 3.5 2.3 3.5 5.2"/></symbol>
+  </defs>
+</svg>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="header-in">
+    <div class="brand-wrap">
+      <a class="brand" href="#top" aria-label="GrowthPulse home">
+        <span class="brand-mark"><svg class="ic"><use href="#i-pulse"/></svg></span>
+        <span class="brand-name">GrowthPulse</span>
+      </a>
+      <span class="top-badge"><i class="dot"></i>LinkedIn Top Voice Accelerator</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="#results">Results</a>
+      <a href="#how">How It Works</a>
+      <a href="#audit">₹1 Audit</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+    <div class="head-right">
+      <a class="btn btn-primary btn-sm" href="https://payments.cashfree.com/forms/getaudit" target="_blank" rel="noopener">Book ₹1 Audit</a>
+      <span class="avatar sm" style="background:linear-gradient(135deg,#0a66c2,#004e99)" aria-hidden="true">GP</span>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= SECTION 1: HERO ================= -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="auth-badge">
+        <svg class="ic"><use href="#i-bolt"/></svg>
+        <span class="t1">The #1 LinkedIn Authority Accelerator</span>
+        <span class="t2">From 0 to Hero Strategy</span>
+      </div>
+      <h1>Turn Your LinkedIn <span class="grad">From Invisible</span> to Influential.</h1>
+      <p class="lead">We don't just "optimize profiles." We build your personal brand from scratch — with strategy, content, and consistency that actually gets you seen.</p>
+      <p class="sub">From 0 to hero on LinkedIn — without confusion, guesswork, or wasting months figuring it out alone.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-md" href="https://payments.cashfree.com/forms/getaudit" target="_blank" rel="noopener">
+          Get Your Profile Audit <svg class="ic" style="font-size:12px"><use href="#i-arrow"/></svg>
+          <span class="pill-only">₹1 only</span>
+        </a>
+        <a class="btn btn-white" href="#lead-form">Start Growing Today</a>
+      </div>
+      <div class="proof">
+        <div class="faces" aria-hidden="true">
+          <span class="face" style="background:linear-gradient(135deg,#4b6fa8,#1f3a63)">AK</span>
+          <span class="face" style="background:linear-gradient(135deg,#b76e79,#6e2f3a)">SR</span>
+          <span class="face" style="background:linear-gradient(135deg,#3f8f7a,#1d5446)">RM</span>
+          <span class="face more">100+</span>
+        </div>
+        <div>
+          <div class="stars" aria-label="Rated 5.0 out of 5">
+            <svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg>
+            <b>5.0 / 5.0</b>
+          </div>
+          <p>Trusted by 100+ founders, consultants &amp; creators</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="show-glow"></div>
+      <div class="show">
+        <div class="show-bar">
+          <div class="lights"><i style="background:#ffdad6"></i><i style="background:#e0e3e5"></i><i style="background:#e6e8ea"></i><span>LinkedIn Growth Velocity Tracker</span></div>
+          <span class="live"><i class="dot"></i>LIVE CASE STUDY</span>
+        </div>
+        <div class="split">
+          <div class="state before">
+            <div class="row"><span class="lbl">Month 0</span><span class="tag">Before</span></div>
+            <div><div class="num">320</div><div class="cap">Profile impressions / mo</div></div>
+            <div class="foot"><svg class="ic"><use href="#i-x"/></svg>0 Inbound Opportunities</div>
+          </div>
+          <div class="state after">
+            <div class="row"><span class="lbl">Month 3</span><span class="tag brand"><svg class="ic"><use href="#i-verified"/></svg>GrowthPulse</span></div>
+            <div><div class="num">245,000+</div><div class="cap">Verified Impressions</div></div>
+            <div class="foot"><svg class="ic"><use href="#i-trend"/></svg>42 Inbound Leads / mo</div>
+          </div>
+        </div>
+        <div class="spark">
+          <div class="spark-top">
+            <div class="l"><svg class="ic"><use href="#i-trend"/></svg>10x Organic Engagement Waveform</div>
+            <span class="r">+76,400%</span>
+          </div>
+          <svg class="chart" viewBox="0 0 387 112" preserveAspectRatio="none" aria-hidden="true">
+            <defs><linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a66c2" stop-opacity=".28"/><stop offset="1" stop-color="#0a66c2" stop-opacity="0"/></linearGradient></defs>
+            <path d="M0 106 C70 104 120 102 170 92 S250 62 290 38 S350 12 381 8 L387 112 L0 112 Z" fill="url(#gArea)"/>
+            <path d="M0 106 C70 104 120 102 170 92 S250 62 290 38 S350 12 381 8" fill="none" stroke="#0a66c2" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+          </svg>
+          <div class="weeks"><span>Week 1 (Audit)</span><span>Week 4 (Sprint)</span><span>Week 8 (Scale)</span><span>Week 12 (Authority)</span></div>
+        </div>
+        <div class="endorse">
+          <div class="who">
+            <span class="avatar" style="width:36px;height:36px;font-size:12px;background:linear-gradient(135deg,#8c5a7e,#4a2a42)" aria-hidden="true">PV</span>
+            <div><b>Pooja Venkatesh</b><span>Founder, NextScale AI</span></div>
+          </div>
+          <span class="voice"><svg class="ic"><use href="#i-verified"/></svg>LinkedIn Top Voice</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 2: ACHIEVEMENTS & METRICS ================= -->
+<section class="sec2" id="results">
+  <div class="sec2-in">
+    <div class="sec-head">
+      <span class="chip">Empirical Validation</span>
+      <h2 class="h2">Real Growth. Real Results.</h2>
+      <p class="s">A data-backed system designed for compounding visibility.</p>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="m-ico" style="background:var(--chip-blue-2)"><svg class="ic"><use href="#i-users"/></svg></div>
+        <div><div class="m-big">100+</div><div class="m-bar"></div><p class="m-txt">Professionals helped to build authority on LinkedIn</p></div>
+      </div>
+      <div class="metric">
+        <div class="m-ico" style="background:var(--chip-blue)"><svg class="ic"><use href="#i-eye"/></svg></div>
+        <div><div class="m-big">4.8M+</div><div class="m-bar"></div><p class="m-txt">Organic Impressions generated across client content</p></div>
+      </div>
+      <div class="metric">
+        <div class="m-ico" style="background:var(--chip-amber);color:var(--amber-deep)"><svg class="ic"><use href="#i-hub"/></svg></div>
+        <div><div class="m-big">350+</div><div class="m-bar" style="background:var(--amber-deep)"></div><p class="m-txt">Inbound Leads generated through high-converting content</p></div>
+      </div>
+      <div class="metric">
+        <div class="m-ico" style="background:var(--chip-sky);color:#001b3d"><svg class="ic"><use href="#i-rocket"/></svg></div>
+        <div><div class="m-big">100%</div><div class="m-bar"></div><p class="m-txt">Personal Brands built from absolute zero</p></div>
+      </div>
+    </div>
+
+    <div class="points">
+      <div class="point"><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Helped 100+ professionals build authority on LinkedIn</div>
+      <div class="point"><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Generated consistent inbound leads through content</div>
+      <div class="point"><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Built personal brands from absolute zero</div>
+      <div class="point"><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Content that reaches thousands organically</div>
+      <div class="point"><span class="tick"><svg class="ic"><use href="#i-check"/></svg></span>Profiles that convert views into opportunities</div>
+    </div>
+
+    <div class="callout">
+      <div class="l">
+        <span class="ci"><svg class="ic"><use href="#i-shield-check"/></svg></span>
+        <div>
+          <h4>This isn't luck. It's a system that works.</h4>
+          <p>Systematic narrative frameworks, algorithm synchronization, and executive ghostwriting.</p>
+        </div>
+      </div>
+      <a class="btn-blue-sm" href="#lead-form">Claim Your Blueprint</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 3: LEAD FORM & ONBOARDING ================= -->
+<section class="sec3" id="how">
+  <div class="sec3-grid">
+    <div class="s3-left">
+      <span class="eyebrow">Zero Risk Evaluation</span>
+      <h2 class="h2">Let's Build Your LinkedIn Presence Together</h2>
+      <p class="lead2">Tell us a bit about you — and we'll show you exactly how to grow.</p>
+
+      <div class="next">
+        <h3>What Happens Next</h3>
+        <div class="steps">
+          <div class="step"><span class="n" style="background:var(--primary);color:#fff">1</span><div><h4>Executive Profile Audit (Within 24 Hours)</h4><p>We review your headline, featured media, and niche positioning to find visibility leaks.</p></div></div>
+          <div class="step"><span class="n" style="background:var(--chip-blue);color:#131b2e">2</span><div><h4>Custom Roadmap Tailored To Your Niche</h4><p>We prepare a 90-day thematic content plan, hook structures, and target prospect persona map.</p></div></div>
+          <div class="step"><span class="n" style="background:var(--chip-amber);color:var(--amber-ink)">3</span><div><h4>1-on-1 Strategy Handoff &amp; Launch</h4><p>We walk you through the exact levers to start turning impressions into qualified sales calls.</p></div></div>
+        </div>
+      </div>
+      <div class="nospam"><svg class="ic"><use href="#i-shield"/></svg>No spam. No fluff. Just actionable clarity.</div>
+    </div>
+
+    <div class="s3-right">
+      <div class="form-card" id="lead-form">
+        <form id="leadForm" novalidate>
+          <div class="field">
+            <label for="name">Your Full Name *</label>
+            <div class="input-wrap">
+              <svg class="ic"><use href="#i-user"/></svg>
+              <input type="text" id="name" name="name" placeholder="e.g. Alex Morgan" autocomplete="name" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Work Email Address *</label>
+            <div class="input-wrap">
+              <svg class="ic"><use href="#i-mail"/></svg>
+              <input type="email" id="email" name="email" placeholder="alex@company.com" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number *</label>
+            <div class="input-wrap">
+              <svg class="ic"><use href="#i-phone"/></svg>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" required>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn"><span id="submitLabel">Get My Growth Plan</span><svg class="ic"><use href="#i-rocket"/></svg></button>
+          <div class="msg" id="formMsg" role="status" aria-live="polite"></div>
+          <div class="secure"><svg class="ic"><use href="#i-lock"/></svg>Protected with enterprise-grade SSL. 100% confidential.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 4: ₹1 AUDIT OFFER ================= -->
+<section class="sec4" id="audit">
+  <div class="offer">
+    <div class="glow a"></div><div class="glow b"></div>
+    <div class="offer-grid">
+      <div class="offer-l">
+        <span class="badge-amber"><svg class="ic"><use href="#i-badge-star"/></svg>Limited Time Spotlight Offer</span>
+        <h2 class="h2">Get a Complete LinkedIn Audit for Just <em>Rupee 1</em></h2>
+        <p class="big">Not a sales call. A real breakdown of what's working, what's not, and what to fix.</p>
+        <div class="price"><s>₹2,999</s><strong>₹1</strong><span>99.9% Off Introductory Pass</span></div>
+        <div class="get">
+          <div><svg class="ic"><use href="#i-idcard"/></svg><span><h4>Profile Review</h4><p>Headline, banner, and positioning analysis</p></span></div>
+          <div><svg class="ic"><use href="#i-chart-search"/></svg><span><h4>Content Gap Analysis</h4><p>Identify missed themes and audience blindspots</p></span></div>
+          <div><svg class="ic"><use href="#i-brand"/></svg><span><h4>Personal Brand Direction</h4><p>Clarify your authority niche and point of view</p></span></div>
+          <div><svg class="ic"><use href="#i-checklist"/></svg><span><h4>Action Steps</h4><p>Direct step-by-step checklist to improve visibility</p></span></div>
+        </div>
+        <div class="why"><svg class="ic"><use href="#i-bulb"/></svg>Why Rupee 1? Because once you see the value, you'll know what to do next.</div>
+      </div>
+
+      <div class="offer-r">
+        <div class="book">
+          <div class="book-top"><h3>Schedule ₹1 Live Audit</h3><span>25 Min Zoom Call</span></div>
+          <div class="book-list">
+            <div><svg class="ic"><use href="#i-calendar"/></svg>Available Today &amp; Tomorrow</div>
+            <div><svg class="ic"><use href="#i-person-check"/></svg>Conducted by Senior LinkedIn Strategist</div>
+            <div><svg class="ic"><use href="#i-video"/></svg>Screen-share teardown + recording delivered</div>
+          </div>
+          <div class="slots"><b>Only 3 Audit Slots Left This Week</b><em>High Demand</em></div>
+          <a class="big-btn" href="https://payments.cashfree.com/forms/getaudit" target="_blank" rel="noopener">Book My Audit Now <svg class="ic"><use href="#i-arrow"/></svg></a>
+          <small>Instant calendar confirmation sent via email</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 5: REVIEWS ================= -->
+<section class="sec5" id="reviews">
+  <div class="sec5-in">
+    <div class="sec-head">
+      <span class="eyebrow">Client Stories</span>
+      <h2 class="h2">What Our Clients Say</h2>
+      <p class="s">Real professionals. Real transformations. Real opportunities.</p>
+    </div>
+
+    <div class="reviews">
+      <article class="review">
+        <div>
+          <div class="r-top"><span class="stars" aria-label="5 stars"><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg></span><svg class="ic vf"><use href="#i-verified"/></svg></div>
+          <blockquote>"I had zero presence before this. Within weeks, I started getting inbound messages and profile views."</blockquote>
+        </div>
+        <div class="person"><span class="avatar" style="background:linear-gradient(135deg,#3a5a8c,#1b2f52)">RD</span><div><b>Rohan Desai</b><span>Tech Founder &amp; Angel Investor</span></div></div>
+      </article>
+      <article class="review">
+        <div>
+          <div class="r-top"><span class="stars" aria-label="5 stars"><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg></span><svg class="ic vf"><use href="#i-verified"/></svg></div>
+          <blockquote>"The clarity I got here saved me months of trial and error."</blockquote>
+        </div>
+        <div class="person"><span class="avatar" style="background:linear-gradient(135deg,#a2576b,#5e2a3b)">SK</span><div><b>Sneha Krishnan</b><span>Senior Product Manager</span></div></div>
+      </article>
+      <article class="review">
+        <div>
+          <div class="r-top"><span class="stars" aria-label="5 stars"><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg></span><svg class="ic vf"><use href="#i-verified"/></svg></div>
+          <blockquote>"It's not just content — it's a full strategy. That's what made the difference."</blockquote>
+        </div>
+        <div class="person"><span class="avatar" style="background:linear-gradient(135deg,#3f8f7a,#1d5446)">AN</span><div><b>Arjun Nair</b><span>Growth Consultant</span></div></div>
+      </article>
+      <article class="review">
+        <div>
+          <div class="r-top"><span class="stars" aria-label="5 stars"><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg><svg class="ic ic-fill"><use href="#i-star"/></svg></span><svg class="ic vf"><use href="#i-verified"/></svg></div>
+          <blockquote>"I finally understand how LinkedIn actually works."</blockquote>
+        </div>
+        <div class="person"><span class="avatar" style="background:linear-gradient(135deg,#7a5aa8,#3f2a63)">KV</span><div><b>Karan Varma</b><span>B2B Sales Director</span></div></div>
+      </article>
+    </div>
+
+    <div class="banner"><svg class="ic"><use href="#i-group"/></svg>Results speak louder than promises.</div>
+  </div>
+</section>
+
+<!-- ================= SECTION 6: FAQ ================= -->
+<section class="sec6" id="faq">
+  <div class="sec6-in">
+    <div class="sec-head" style="align-self:center">
+      <span class="eyebrow">Got Questions?</span>
+      <h2 class="h2">Frequently Asked Questions</h2>
+      <p class="s">Everything you need to know about partnering with GrowthPulse.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Who is this service for?<svg class="ic"><use href="#i-chev"/></svg></summary>
+        <p>Founders, consultants, executives, and creators who want to be seen as a voice of authority on LinkedIn and turn visibility into inbound opportunities.</p>
+      </details>
+      <details>
+        <summary>Do you create content for me?<svg class="ic"><use href="#i-chev"/></svg></summary>
+        <p>Yes. We build the narrative framework and content plan, and support you with executive ghostwriting so your posts sound like you.</p>
+      </details>
+      <details>
+        <summary>How long does it take to see results?<svg class="ic"><use href="#i-chev"/></svg></summary>
+        <p>Most clients start seeing more profile views and inbound messages within the first few weeks. Authority compounds over about 90 days of consistent publishing.</p>
+      </details>
+      <details>
+        <summary>Is this only for job seekers?<svg class="ic"><use href="#i-chev"/></svg></summary>
+        <p>No. It works for anyone who wants to attract clients, partners, investors, or career opportunities through a strong personal brand.</p>
+      </details>
+      <details>
+        <summary>What makes this different?<svg class="ic"><use href="#i-chev"/></svg></summary>
+        <p>We don't just tidy up your profile. We build your personal brand from scratch with strategy, content, and consistency that gets you seen.</p>
+      </details>
+      <details>
+        <summary>Do I need prior experience on LinkedIn?<svg class="ic"><use href="#i-chev"/></svg></summary>
+        <p>Not at all. We've built brands from absolute zero, and we guide you through every step.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECTION 7: FINAL CTA ================= -->
+<section class="sec7">
+  <div class="final">
+    <span class="chip2">Ready for explosive inbound?</span>
+    <h2>Ready to turn your LinkedIn into an opportunity magnet?</h2>
+    <p class="s">Join 100+ high-performing executives and founders who command attention and win clients with GrowthPulse.</p>
+    <div class="btns">
+      <a class="btn btn-primary btn-lg" href="https://payments.cashfree.com/forms/getaudit" target="_blank" rel="noopener">Book Your ₹1 Audit <svg class="ic" style="font-size:13px"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-gray" href="#lead-form">Submit Application</a>
+    </div>
+    <div class="closing">
+      <div>
+        <div class="nm">GrowthPulse</div>
+        <p>Building personal brands that stand out — not blend in.</p>
+      </div>
+      <div class="r">
+        <b>Have questions? Reach out anytime.</b>
+        <div class="links"><a href="mailto:hello@growthpulse.agency">hello@growthpulse.agency</a><span aria-hidden="true">•</span><a href="https://www.linkedin.com/" target="_blank" rel="noopener">Direct LinkedIn Message</a></div>
+        <small>2026 All Rights Reserved. Built for those who are ready to be seen.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-in">
+    <a class="brand" href="#top"><span class="brand-mark"><svg class="ic"><use href="#i-pulse"/></svg></span><span class="brand-name">GrowthPulse Agency</span></a>
+    <nav class="f-links" aria-label="Footer">
+      <a href="#results">Results</a><a href="#how">How It Works</a><a href="#reviews">Reviews</a><a href="#faq">FAQs</a>
+    </nav>
+    <div class="copy">© 2025 GrowthPulse. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwuQSrwygrOfvW5Y3T4bkuYyW6bZIo7zjUo1mRKHFb1tG6QPFvNSbp4LC7QjpQDQnIXNA/exec";
+
+  var form = document.getElementById("leadForm");
+  var btn = document.getElementById("submitBtn");
+  var label = document.getElementById("submitLabel");
+  var msg = document.getElementById("formMsg");
+  var fields = {
+    name: document.getElementById("name"),
+    email: document.getElementById("email"),
+    phone: document.getElementById("phone")
+  };
+
+  function setBusy(busy) {
+    btn.disabled = busy;
+    label.textContent = busy ? "Sending..." : "Get My Growth Plan";
+  }
+
+  function showSuccess() {
+    setBusy(false);
+    form.reset();
+    msg.className = "msg ok";
+    msg.textContent = "Thank you! We've received your details and will be in touch within 24 hours.";
+  }
+
+  function showError() {
+    setBusy(false);
+    msg.className = "msg err";
+    msg.textContent = "Something went wrong while sending your details. Please check your connection and try again.";
+  }
+
+  function validate() {
+    var ok = true;
+    var v = {
+      name: fields.name.value.trim(),
+      email: fields.email.value.trim(),
+      phone: fields.phone.value.trim()
+    };
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email);
+    var phoneOk = v.phone.replace(/[^\d]/g, "").length >= 7;
+
+    fields.name.classList.toggle("bad", !v.name);
+    fields.email.classList.toggle("bad", !emailOk);
+    fields.phone.classList.toggle("bad", !phoneOk);
+
+    if (!v.name || !emailOk || !phoneOk) ok = false;
+    if (!ok) {
+      msg.className = "msg err";
+      msg.textContent = "Please enter your name, a valid email, and a valid phone number.";
+      return null;
+    }
+    return v;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    msg.className = "msg";
+    msg.textContent = "";
+
+    var data = validate();
+    if (!data) return;
+
+    setBusy(true);
+
+    var url = SCRIPT_URL + "?" + new URLSearchParams({
+      name: data.name,
+      email: data.email,
+      phone: data.phone
+    });
+
+    fetch(url, { method: "GET", mode: "no-cors" })
+      .then(function () { showSuccess(); })
+      .catch(function () { showError(); });
+  });
+
+  ["name", "email", "phone"].forEach(function (k) {
+    fields[k].addEventListener("input", function () { fields[k].classList.remove("bad"); });
+  });
+})();
+</script>
+</body>
+</html>
